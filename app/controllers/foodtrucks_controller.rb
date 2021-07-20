@@ -1,6 +1,6 @@
 class FoodtrucksController < ApplicationController
   def index
-    @foodtrucks = Foodtruck.all
+    @foodtrucks = policy_scope(Foodtruck)
   end
   
 end
