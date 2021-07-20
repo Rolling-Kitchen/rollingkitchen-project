@@ -5,4 +5,6 @@ class User < ApplicationRecord
   has_many :foodtrucks
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  validates_presence_of :first_name, :last_name, on: :create, message: "can't be blank"
+
 end
