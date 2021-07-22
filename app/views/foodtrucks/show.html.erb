@@ -1,0 +1,14 @@
+<h1>show</h1>
+
+<p>Name: <%= @foodtruck.name %></p>
+<p>Food Type: <%= @foodtruck.food_type %></p>
+<p>Location: <%= @foodtruck.location %></p>
+<p>Menu Package: <%= @foodtruck.menu_package %></p>
+<p>Description <%= @foodtruck.description %></p>
+
+
+<%# Only show the edit button if the user has authorization to make foodtrucks %>
+<% if policy(Foodtruck).create? %>
+  <button type="button" class="btn btn-primary">Edit your foodtruck</button>
+<% end %>
+<button type="button" class="btn btn-primary">Create a Booking</button>

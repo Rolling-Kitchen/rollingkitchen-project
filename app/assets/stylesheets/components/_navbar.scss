@@ -1,12 +1,18 @@
-.navbar-lewagon {
+.navbar-rollingkitchen {
   justify-content: space-between;
-  background: white;
+  background: $gray-dark;
+  padding: 8px;
+  
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-rollingkitchen .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-rollingkitchen .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  color: $primary-light;
 }
