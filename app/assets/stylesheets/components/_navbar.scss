@@ -1,7 +1,8 @@
 .navbar-rollingkitchen {
   justify-content: space-between;
-  background: $primary-dark;
+  background: $gray-dark;
   padding: 8px;
+  
 }
 
 .navbar-rollingkitchen .navbar-collapse {
@@ -10,4 +11,8 @@
 
 .navbar-rollingkitchen .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  color: $primary-light;
 }
