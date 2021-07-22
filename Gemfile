@@ -69,3 +69,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'cloudinary', '~> 1.16.0'
 
+
+# Material Icons
+
+gem 'materialize-sass'
+
+gem 'material_icons'
