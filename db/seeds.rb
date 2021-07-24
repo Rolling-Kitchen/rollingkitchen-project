@@ -34,8 +34,13 @@ kripik = Foodtruck.create!(
   { 
     user: user_seed,
     name: "Kripik",
-    description: "Kripik is a fun addition to your event with both appetizers and meals!
-    We work with fresh ingredients and make as much as possible ourselves.",
+    description: "Kripik serves delicious Indonesian food and snacks from a cozy baking moped!
+The perfect food truck for any occasion with a diverse selection.
+
+All our dishes are freshly prepared by hand from our own kitchen. Really authentic and deliciously responsible!
+Our Gado Gado can be prepared both vegetarian and with chicken. To finish your meal, you should definitely try the fried banana with or without powdered sugar.
+
+Booking = enjoying!",
     food_type: "Asian",
     menu_package: "Kripik serves: Soto soup, Chicken satay with peanut sauce, Vegetarian spring rolls, Chicken spring rolls, Gado Gado, Fried banana",
     location: "216-1034, Nishishichijo Minaminishinocho, Shimogyo-ku-shi, Kyoto, Japan",
