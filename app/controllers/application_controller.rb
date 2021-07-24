@@ -14,10 +14,23 @@ class ApplicationController < ActionController::Base
   #   redirect_to(root_path)
   # end
 
+
+  protect_from_forgery with: :exception
+
+  # For Devise to get custom fields
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   private
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
+
+# For Devise to get custom fields
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :first_name, :last_name, :is_restaurant, :password)}
+
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :first_name, :last_name, :is_restaurant,  :current_password)}
+end
 
 end
