@@ -1,7 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <span><i class="fa fa-bolt" style="color: #ffb400"></i> $<%= @foodtruck.name %></span>
-        <span class="pull-right">Per Day</span>
+        <span class="pull-right"></span>
     </div>
     <div class="panel-body">
         <%= form_for([@foodtruck, @foodtruck.bookings.new]) do |f| %>

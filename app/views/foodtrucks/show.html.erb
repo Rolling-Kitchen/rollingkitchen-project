@@ -6,19 +6,45 @@
     </div>
 
     <div class="col-md-4 booking-form">
-      <h2>Book foodtruck</h2>
+      <h3>Book <%= @foodtruck.name %></h3>
       <!-- Reservation Form -->
       <%= render 'bookings/form' %>
     </div>
   </div>
 
-  <div class="foodtruck-info">
+<div class="info-container">
+  <div class="foodtruck-description">
     <h1><%= @foodtruck.name %></h1>
-    <p>Food Type: <%= @foodtruck.food_type %></p>
-    <p>Location: <%= @foodtruck.location %></p>
-    <p>Menu Package: <%= @foodtruck.menu_package %></p>
-    <p>Description <%= @foodtruck.description %></p>
+    <br>
+    <p><%= @foodtruck.description %></p>
+    <div class="menu-package">
+    <h4>Menu Package</h4>
+    </div>
+    <p><%= @foodtruck.menu_package %></p>
   </div>
+  <div class="foodtruck-details">
+  <div class="details-title">
+  <h4>Details</h4>
+  </div>
+  <table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">Food Type</th>
+      <td><%= @foodtruck.food_type %></td>
+    </tr>
+    <tr>
+      <th scope="row">Required facilities</th>
+      <td>Electricity, gas</td>
+    </tr>
+      <tr>
+        <th scope="row">Location</th>
+        <td><%= @foodtruck.location %></td>
+    </tr>
+    </tbody>
+    </table>
+
+  </div>
+</div>
 
   <%# Only show the edit button if the user has authorization to make foodtrucks %>
   <% if policy(Foodtruck).create? %>

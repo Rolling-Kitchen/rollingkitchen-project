@@ -1,25 +1,58 @@
 .container {
-  width: 100%;
+  width: 87%;
   padding-top: 20px;
 }
 
 .foodtruck-img {
-  display: block;
+  border-radius: 3px;
 }
 
 .booking-container {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .booking-form {
-  background-color: rgb(238, 238, 238);
-  padding: 15px;
+  background-color: rgb(248, 248, 248);
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
 }
 
 .foodtruck-info {
-  padding-top: 20px;
+  margin-top: 18px;
   width: 800px;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(248, 248, 248);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
   padding: 15px;
+}
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-radius: 3px;
+}
+
+.foodtruck-description {
+ width: 800px;
+ background-color: rgb(248, 248, 248);
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+ padding: 20px;
+}
+
+.foodtruck-details {
+  padding: 20px;
+  width: 408px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  border-radius: 3px;
+  background-color: rgb(248, 248, 248);
+}
+
+.details-title {
+  margin-bottom: 30px;
+}
+
+.menu-package {
+  padding-top: 10px;
 }
