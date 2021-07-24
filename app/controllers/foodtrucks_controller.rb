@@ -12,7 +12,8 @@ class FoodtrucksController < ApplicationController
   
   def create
     @foodtruck = Foodtruck.new(foodtruck_params)
-    if @foodtruck.save
+    @foodtruck.user = current_user
+    if @foodtruck.save!
       redirect_to foodtruck_path(@foodtruck)
     else
       render :new
