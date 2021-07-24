@@ -1,18 +1,34 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <span><i class="fa fa-bolt" style="color: #ffb400"></i> $<%= @foodtruck.name %></span>
-        <span class="pull-right">Per Day</span>
+        <span class="pull-right">'s foodtruck rent form</span>
     </div>
     <div class="panel-body">
         <%= form_for([@foodtruck, @foodtruck.bookings.new]) do |f| %>
             <div class="row">
                 <div class="col-md-6">
                     <label>Rent start date</label>
-                    <%= f.text_field :start_time, readonly: true, placeholder: "Start Date", class: "form-control datepicker" %>
+                    <%= f.text_field :start_time, readonly: false, placeholder: "Start Date", class: "form-control datepicker" %>
                 </div>
                 <div class="col-md-6">
                     <label>Rent end date</label>
-                    <%= f.text_field :end_time, readonly: true, placeholder: "End Date", class: "form-control datepicker", disabled: true %>
+                    <%= f.text_field :end_time, readonly: false, placeholder: "End Date", class: "form-control datepicker", disabled: false %>
+                </div>
+                <div class="col-md-12">
+                    <label>Your event's name</label>
+                    <%= f.text_field :event_name, readonly: false, placeholder: "Event name", class: "form-control datepicker", disabled: false %>
+                </div>
+                <div class="col-md-12">
+                    <label>Your event's details</label>
+                    <%= f.text_field :event_details, readonly: false, placeholder: "Event details", class: "form-control datepicker", disabled: false %>
+                </div>
+                <div class="col-md-12">
+                    <label>How many people will attend?</label>
+                    <%= f.text_field :expected_attendees, readonly: false, placeholder: "Number of people", class: "form-control datepicker", disabled: false %>
+                </div>
+                <div class="col-md-12">
+                    <label>Where is the location of the event?</label>
+                    <%= f.text_field :event_location, readonly: false, placeholder: "Location address", class: "form-control datepicker", disabled: false %>
                 </div>
             </div>
             <h4 class="message-alert text-center"><span id="message"></span></h4>
@@ -36,7 +52,7 @@
             </div>
 
             <br />
-            <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+            <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: false %>
         <% end %>
     </div>
 </div>
