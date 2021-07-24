@@ -7,6 +7,9 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "simple_calendar";
+@import "flatpickr/dist/themes/material_orange";
+
 
 // Your CSS partials
 @import "components/index";
@@ -14,3 +17,4 @@
 
 // External Icons
 @import "materialize/components/icons-material-design";
+

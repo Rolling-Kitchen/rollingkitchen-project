@@ -75,3 +75,6 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'materialize-sass'
 
 gem 'material_icons'
+
+#Calendar
+gem "simple_calendar", "~> 2.4"
