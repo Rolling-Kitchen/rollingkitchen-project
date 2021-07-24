@@ -1,7 +1,5 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <span><i class="fa fa-bolt" style="color: #ffb400"></i> $<%= @foodtruck.name %></span>
-        <span class="pull-right">'s foodtruck rent form</span>
     </div>
     <div class="panel-body">
         <%= form_for([@foodtruck, @foodtruck.bookings.new]) do |f| %>
@@ -52,7 +50,7 @@
             </div>
 
             <br />
-            <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: false %>
+            <%= f.submit "Book Now", id: "btn_book", class: "btn btn-secondary btn-block", disabled: false %>
         <% end %>
     </div>
 </div>
