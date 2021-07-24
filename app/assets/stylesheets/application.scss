@@ -7,10 +7,12 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "flatpickr/dist/themes/material_orange";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
 // External Icons
 @import "materialize/components/icons-material-design";

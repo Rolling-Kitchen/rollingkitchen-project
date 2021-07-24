@@ -17,20 +17,7 @@
     border: 4px solid transparent;
   }
   
-  // demo stuff 👇
-  .btn-card,
- .btn-card {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--btn-font-size, 1em);
-    color: var(--color-contrast-medium);
-    padding: var(--space-xs) var(--space-md);
-    cursor: pointer;
-    transition: color .2s;
-    
-    &:hover {
-      color: var(--color-contrast-high);
-    }
+  .btn {
+    background-color: rgb(235, 132, 63);
+    border-color: rgb(158, 102, 19);
   }
