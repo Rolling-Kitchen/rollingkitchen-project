@@ -1,19 +1,25 @@
 
-<div class="container">
-<h1>booking index </h1>
-
-
+<div class="container mt-4">
+<h1>My Foodtruck Bookings</h1>
 <h1> </h1>
   <div class="row">
   <% @bookings.each do |booking| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Status:<%= booking.status %></h5>
-        <h5 class="card-title">Food Truck Name:<%= booking.foodtruck.name %></h5>
-        <div class="btn-card">
+    <div class="card mt-4 mb-4 card-body" style="width: 100%;">
+        <div class = "card-summary" style="display: flex;align-items: center;">
+          <%= cl_image_tag booking.foodtruck.photo.key, height: 100, width: 100, crop: :fill %>
+          <div class = "ml-4">
+          <h2 class="card-title"><%= booking.created_at.strftime("Reservation made on %A, %b %d, %Y ") %></h2>
+          <h5 class="card-text">Truck name: <%= booking.foodtruck.name %></h5>
+          <h5 class="card-text">Status: <%= booking.status %></h5>
+          </div>
+        </div>
+        <div class = "card-details mt-4">
+          <h5 class="card-text">Booking Date: </h2><p><%= booking.start_time.strftime("%b %d, %Y ") %> to <%= booking.end_time.strftime("%b %d, %Y ") %> </p>
+          <h5 class="card-text">Event Name: </h5> <p> <%= booking.event_name %></p>
+          <h5 class="card-text">Event Details:</h5> <p><%= booking.event_details %></p>
+          <h5 class="card-text">Event Location:</h5> <p><%= booking.event_location %></p>
+          <h5 class="card-text">Expected Attendees:</h5> <p><%= booking.expected_attendees %></p>
         </div>
       </div>
-    </div>
   <% end %>
   </div>
-</div>
