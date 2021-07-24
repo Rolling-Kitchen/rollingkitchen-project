@@ -8,8 +8,9 @@ class FoodtrucksController < ApplicationController
   def show
     @foodtruck = Foodtruck.find(params[:id])
     authorize @foodtruck
+    @booking = Booking.new
   end
-  
+
   def create
     @foodtruck = Foodtruck.new(foodtruck_params)
     @foodtruck.user = current_user
@@ -19,7 +20,7 @@ class FoodtrucksController < ApplicationController
       render :new
     end
     authorize @foodtruck
-  end 
+  end
 
   def new
     @foodtruck = Foodtruck.new
@@ -30,5 +31,5 @@ class FoodtrucksController < ApplicationController
 
   def foodtruck_params
     params.require(:foodtruck).permit(:name, :description, :food_type, :menu_package, :location, :photo)
-  end 
+  end
 end
