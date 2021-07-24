@@ -1,1 +1,19 @@
-<h1>index page </h1>
+
+<div class="container">
+<h1>booking index </h1>
+
+
+<h1> </h1>
+  <div class="row">
+  <% @bookings.each do |booking| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Status:<%= booking.status %></h5>
+        <h5 class="card-title">Food Truck Name:<%= booking.foodtruck.name %></h5>
+        <div class="btn-card">
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
