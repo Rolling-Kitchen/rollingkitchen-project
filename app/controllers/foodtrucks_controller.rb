@@ -19,7 +19,7 @@ class FoodtrucksController < ApplicationController
       render :new
     end
     authorize @foodtruck
-  end
+  end 
 
   def new
     @foodtruck = Foodtruck.new
