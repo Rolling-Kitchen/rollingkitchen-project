@@ -27,7 +27,7 @@ nice_fries = Foodtruck.create!(
     Fresh fries pulled pork/chicken salad, Burgundy croquette, Fricadelle, Bitter starter.",
     location: "492-1260 Takada, Aizumisato-machi Onuma-gun, Fukushima, Japan"
   })
-  nice_fries.photos.attach(io: fries_image, filename: 'nice_fries.png', content_type: 'image/png')
+  nice_fries.photo.attach(io: fries_image, filename: 'nice_fries.png', content_type: 'image/png')
   
   
 kripik = Foodtruck.create!(
@@ -40,7 +40,7 @@ kripik = Foodtruck.create!(
     menu_package: "Kripik serves: Soto soup, Chicken satay with peanut sauce, Vegetarian spring rolls, Chicken spring rolls, Gado Gado, Fried banana",
     location: "216-1034, Nishishichijo Minaminishinocho, Shimogyo-ku-shi, Kyoto, Japan",
   })
-  kripik.photos.attach(io: indonesian_image, filename: 'kripik.png', content_type: 'image/png')
+  kripik.photo.attach(io: indonesian_image, filename: 'kripik.png', content_type: 'image/png')
 
 build_burrito = Foodtruck.create!(
   { 
@@ -52,7 +52,7 @@ build_burrito = Foodtruck.create!(
     menu_package: "We serve the following items: Burrito, Burrito-bowl, Nachos, Tacos, Chili-cheese fries",
     location: "8-8, Roppongi 3-chome, Minato-ku, Tokyo, Japan",
   })
-  build_burrito.photos.attach(io: burrito_image, filename: 'burrito.png', content_type: 'image/png')
+  build_burrito.photo.attach(io: burrito_image, filename: 'burrito.png', content_type: 'image/png')
 
 bagels_beans = Foodtruck.create!(
   { 
@@ -65,7 +65,7 @@ bagels_beans = Foodtruck.create!(
     menu_package: "Coffee: Americano, Espresso, Cappuccino, Latte Macchiato, Flat White, Bagels: Salmon Creamcheese, Carpaccio, BLT, Tomato & Egg",
     location: "461-1168, Harumi Ofuisutawax(11-kai), Chuo-ku, Tokyo, Japan",
   })
-  bagels_beans.photos.attach(io: coffee_image, filename: 'bagels_beans.png', content_type: 'image/png')
+  bagels_beans.photo.attach(io: coffee_image, filename: 'bagels_beans.png', content_type: 'image/png')
 
 lx_barbecue = Foodtruck.create!(
   { 
@@ -77,6 +77,6 @@ lx_barbecue = Foodtruck.create!(
     menu_package: "Burgers, spareribs, hotwings, pulled pork, pulled chicken, pulled beef and smokey pinchos",
     location: "197-1250, Oyoshi, Koshigaya-shi, Saitama, Japan",
   })
-  lx_barbecue.photos.attach(io: barbecue_image, filename: 'lx_barbecue.png', content_type: 'image/png')
+  lx_barbecue.photo.attach(io: barbecue_image, filename: 'lx_barbecue.png', content_type: 'image/png')
 
 puts "seeds created!"

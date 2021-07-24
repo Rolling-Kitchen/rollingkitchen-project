@@ -6,8 +6,8 @@
   <div class="row">
   <% @foodtrucks.each do |foodtruck| %>
     <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
+      <%= cl_image_tag foodtruck.photo.key %>     
+    <div class="card-body">
         <h5 class="card-title">Name:<%= foodtruck.name %></h5>
         <p class="card-food-type">Food type:<%= foodtruck.food_type %></p>
         <p class="card-text">Description: <%= foodtruck.description %></p>
