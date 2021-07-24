@@ -1,9 +1,42 @@
+.card-container {
+  padding: 40px;
+  background-color: white;
+}
+
 .card {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     border-radius: 4px;
+    margin: 12px;
+    
   }
   
   .card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
+
+.card-title {
+  font-family: $body-font;
+  font-size: 20px;
+  font-weight: 800;
+  color: $gray;
+}
+
+.card-food-type {
+  font-family: $body-font;
+  font-size: 16px;
+  font-weight: 300;
+  color: $gray;
+}
+
+.card-text {
+  font-family: $body-font;
+  font-size: 16px;
+  font-weight: 100;
+  color: $gray;
+}
+
+.img-card {
+  width: 100px;
+}
+
