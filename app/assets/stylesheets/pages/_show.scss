@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.foodtruck-img {
+  display: block;
+}
+
+.booking-container {
+  display: flex;
+  justify-content:space-between;
+}
+
+.booking-form {
+  background-color: rgb(238, 238, 238);
+  padding: 15px;
+}
+
+.foodtruck-info {
+  padding-top: 20px;
+  width: 800px;
+  background-color: rgb(238, 238, 238);
+  padding: 15px;
+}
