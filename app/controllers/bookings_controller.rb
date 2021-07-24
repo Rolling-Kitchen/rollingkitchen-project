@@ -21,11 +21,12 @@ class BookingsController < ApplicationController
         end
         redirect_to foodtruck
     end
+    def index
+        @bookings = policy_scope(Booking).where(user_id: current_user.id)
+    end
 
     private
         def bookings_params
             params.require(:booking).permit(:start_date, :end_date)
         end
-end
-
 end
