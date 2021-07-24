@@ -6,9 +6,14 @@
 <p>Menu Package: <%= @foodtruck.menu_package %></p>
 <p>Description <%= @foodtruck.description %></p>
 
-
 <%# Only show the edit button if the user has authorization to make foodtrucks %>
 <% if policy(Foodtruck).create? %>
   <button type="button" class="btn btn-primary">Edit your foodtruck</button>
 <% end %>
 <button type="button" class="btn btn-primary">Create a Booking</button>
+
+
+<div class="col-md-4">
+    <!-- Reservation Form -->
+    <%= render 'bookings/form' %>
+</div>
