@@ -6,7 +6,6 @@
 <p>Menu Package: <%= @foodtruck.menu_package %></p>
 <p>Description <%= @foodtruck.description %></p>
 
-
 <%# Only show the edit button if the user has authorization to make foodtrucks %>
 <% if policy(Foodtruck).create? %>
   <button type="button" class="btn btn-primary">Edit your foodtruck</button>
