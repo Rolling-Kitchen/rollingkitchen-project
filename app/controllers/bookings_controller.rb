@@ -21,6 +21,9 @@ class BookingsController < ApplicationController
         end
         redirect_to foodtruck
     end
+    def index
+        @bookings = policy_scope(Booking).where(user_id: current_user.id)
+    end
 
     private
         def bookings_params
