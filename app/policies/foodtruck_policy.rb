@@ -1,5 +1,4 @@
 class FoodtruckPolicy < ApplicationPolicy
-
   class Scope < Scope
     def resolve
       scope.all
