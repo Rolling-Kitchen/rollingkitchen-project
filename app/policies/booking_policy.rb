@@ -1,14 +1,10 @@
-class FoodtruckPolicy < ApplicationPolicy
-
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
     end
   end
-  def show?
-    return true
-  end
-  def create?
+  def index?
     return true
   end
 end
