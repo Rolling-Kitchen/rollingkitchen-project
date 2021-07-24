@@ -2,7 +2,7 @@
 <div class="card-container">
  <div class="holder" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
   <% @foodtrucks.each do |foodtruck| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card <%= foodtruck.food_type.gsub(' ', '').downcase %> " style="width: 18rem;">
        <%= cl_image_tag foodtruck.photo.key, :class => "img-card" %>  
       <div class="card-body">
         <h5 class="card-title"> <%= foodtruck.name %></h5>
@@ -15,8 +15,6 @@
   <% end %>
   </div>
 </div>
-
-
    
 
 
