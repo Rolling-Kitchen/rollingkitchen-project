@@ -45,7 +45,7 @@ gem 'materialize-sass'
 gem 'material_icons'
 
 #Calendar
-gem "simple_calendar", "~> 2.4"
+# gem "simple_calendar", "~> 2.4"
 
 
 group :development, :test do
