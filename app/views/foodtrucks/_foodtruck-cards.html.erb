@@ -3,14 +3,10 @@
  <div class="holder" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
   <% @foodtrucks.each do |foodtruck| %>
     <div class="card" style="width: 18rem;">
-<<<<<<< HEAD
-      <%= cl_image_tag foodtruck.photo.key %> 
-=======
        <%= cl_image_tag foodtruck.photo.key, :class => "img-card" %>  
->>>>>>> master
       <div class="card-body">
         <h5 class="card-title"> <%= foodtruck.name %></h5>
-        <p class="card-food-type">Food type:<%= foodtruck.food_type %></p>
+        <p class="card-food-type"><%= foodtruck.food_type %></p>
         <div class="btn-card">
           <%= link_to 'SHOW MORE', foodtruck_path(foodtruck), :class => "btn-card" %>
         </div>
