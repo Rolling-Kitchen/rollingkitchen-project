@@ -1,6 +1,8 @@
-<h1>show</h1>
 
-<p>Name: <%= @foodtruck.name %></p>
+<div class = "show">
+
+<h1> <%= @foodtruck.name %></h1>
+
 <p>Food Type: <%= @foodtruck.food_type %></p>
 <p>Location: <%= @foodtruck.location %></p>
 <p>Menu Package: <%= @foodtruck.menu_package %></p>
@@ -13,7 +15,9 @@
 <button type="button" class="btn btn-primary">Create a Booking</button>
 
 
-<div class="col-md-4">
+
     <!-- Reservation Form -->
     <%= render 'bookings/form' %>
+
 </div>
+
