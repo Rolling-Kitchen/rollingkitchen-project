@@ -1,8 +1,8 @@
 <div class="container">
   <div class="booking-container">
-    
+
     <div class="foodtruck-img">
-      <%= cl_image_tag @foodtruck.photo.key, width: 800, crop: :fill %> 
+      <%= cl_image_tag @foodtruck.photo.key, width: 800, crop: :fill %>
     </div>
 
     <div class="col-md-4 booking-form">
@@ -12,46 +12,46 @@
     </div>
   </div>
 
-<div class="info-container">
-  <div class="foodtruck-description">
-    <h1><%= @foodtruck.name %></h1>
-    <br>
-    <p><%= @foodtruck.description %></p>
-    <div class="menu-package">
-    <h4>Menu Package</h4>
+  <div class="info-container">
+    <div class="foodtruck-description">
+      <h1><%= @foodtruck.name %></h1>
+      <br>
+      <p><%= @foodtruck.description %></p>
+      <div class="menu-package">
+        <h4>Menu Package</h4>
+      </div>
+      <p><%= @foodtruck.menu_package %></p>
     </div>
-    <p><%= @foodtruck.menu_package %></p>
-  </div>
-  <div class="foodtruck-details">
-  <div class="details-title">
-  <h4>Details</h4>
-  </div>
-  <table class="table">
-  <tbody>
-      <tr class="border-light">
-      <th scope="row">Rating</th>
-      <td>⭐️ ⭐️ ⭐️ ⭐️</td>
-    </tr>
-    <tr class="border-light">
-      <th scope="row">Food Type</th>
-      <td><%= @foodtruck.food_type %></td>
-    </tr>
-    <tr class="border-light">
-      <th scope="row">Required facilities</th>
-      <td>Electricity, gas</td>
-    </tr>
-      <tr class="border-light">
-        <th scope="row">Location </th>
-        <td><%= @foodtruck.location %></td>
-    </tr>
-    </tbody>
-    </table>
+    <div class="foodtruck-details">
+      <div class="details-title">
+        <h4>Details</h4>
+      </div>
+      <table class="table">
+        <tbody>
+          <tr class="border-light">
+            <th scope="row">Rating</th>
+            <td>⭐️ ⭐️ ⭐️ ⭐️</td>
+          </tr>
+          <tr class="border-light">
+            <th scope="row">Food Type</th>
+            <td><%= @foodtruck.food_type %></td>
+          </tr>
+          <tr class="border-light">
+            <th scope="row">Required facilities</th>
+            <td>Electricity, gas</td>
+          </tr>
+          <tr class="border-light">
+            <th scope="row">Location </th>
+            <td><%= @foodtruck.location %></td>
+          </tr>
+        </tbody>
+      </table>
 
+    </div>
   </div>
-</div>
 
   <%# Only show the edit button if the user has authorization to make foodtrucks %>
   <% if policy(Foodtruck).create? %>
-    <button type="button" class="btn btn-secondary">Edit your foodtruck</button>
+  <button type="button" class="btn btn-secondary">Edit your foodtruck</button>
   <% end %>
 </div>
