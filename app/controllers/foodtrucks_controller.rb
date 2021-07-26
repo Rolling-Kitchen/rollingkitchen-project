@@ -7,6 +7,7 @@ class FoodtrucksController < ApplicationController
 
   def show
     @foodtruck = Foodtruck.find(params[:id])
+    @booking = Booking.new()    
     authorize @foodtruck
   end
   

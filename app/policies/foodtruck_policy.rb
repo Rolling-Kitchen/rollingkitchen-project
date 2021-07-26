@@ -9,7 +9,7 @@ class FoodtruckPolicy < ApplicationPolicy
     end
     def create?
       #current_user.is_restaurant?
-      return false
+      return true
     end
     def new?
       return true
