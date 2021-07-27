@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_24_023345) do
+ActiveRecord::Schema.define(version: 2021_07_27_121548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2021_07_24_023345) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.string "status"
     t.datetime "start_time"
     t.datetime "end_time"
     t.bigint "foodtruck_id", null: false
@@ -55,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_07_24_023345) do
     t.string "event_details"
     t.string "expected_attendees"
     t.string "event_location"
+    t.integer "status"
     t.index ["foodtruck_id"], name: "index_bookings_on_foodtruck_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
