@@ -48,6 +48,10 @@
                 <td><%= @foodtruck.food_type %></td>
               </tr>
               <tr class="border-light">
+                <th scope="row">Food Price</th>
+                <td><%= @foodtruck.food_price %></td>
+              </tr>
+              <tr class="border-light">
                 <th scope="row">Required facilities</th>
                 <td>Electricity, gas</td>
               </tr>
@@ -83,4 +87,3 @@
 </style>
 
       <%# <%= cl_image_tag @foodtruck.photo.key, width: 1000,   :class => "img-fluid center-block foodtruck-img" %> %>
-
