@@ -51,7 +51,13 @@
   </div>
 
   <%# Only show the edit button if the user has authorization to make foodtrucks %>
-  <% if policy(Foodtruck).create? %>
-  <button type="button" class="btn btn-secondary">Edit your foodtruck</button>
-  <% end %>
+  <%# if policy(Foodtruck).create? %>
+  <%#<button type="button" class="btn btn-secondary">Edit your foodtruck</button> %>
+  <button class = "btn"><%= link_to "Edit",
+            edit_foodtruck_path(@foodtruck)%></button>
+  <button class="btn"><%= link_to "Delete",
+            foodtruck_path(@foodtruck),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></button>
+  <%#<% end %>
 </div>

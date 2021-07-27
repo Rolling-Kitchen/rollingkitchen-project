@@ -1,4 +1,5 @@
 class FoodtrucksController < ApplicationController
+  before_action :set_foodtruck, only: [:show, :edit, :update, :destroy]
 
   def index
     # Policy scope - defaults to resolve.all and shows all.
@@ -6,7 +7,6 @@ class FoodtrucksController < ApplicationController
   end
 
   def show
-    @foodtruck = Foodtruck.find(params[:id])
     @booking = Booking.new()    
     authorize @foodtruck
   end
@@ -27,7 +27,27 @@ class FoodtrucksController < ApplicationController
     authorize @foodtruck
   end
 
+  def edit
+    authorize @foodtruck
+  end
+
+  def update
+    @foodtruck.update(foodtruck_params)
+    redirect_to foodtruck_path(@foodtruck)
+    authorize @foodtruck
+  end
+
+  def destroy
+    @foodtruck.destroy
+    redirect_to root_path
+    authorize @foodtruck
+  end
+
   private
+
+  def set_foodtruck
+    @foodtruck = Foodtruck.find(params[:id])
+  end
 
   def foodtruck_params
     params.require(:foodtruck).permit(:name, :description, :food_type, :menu_package, :location, :photo)
