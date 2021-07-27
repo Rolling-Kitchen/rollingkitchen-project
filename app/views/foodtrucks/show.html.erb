@@ -1,25 +1,25 @@
-<div class="container">
-  <div class="booking-container">
-
-    <div class="foodtruck-img">
-      <%= cl_image_tag @foodtruck.photo.key, width: 800, crop: :fill %>
+<div class="container-md">
+  <%# Top Row %>
+  <div class="row mt-5">
+    <div class="col-md-7 col-sm-12">
+        <%= cl_image_tag @foodtruck.photo.key, width: 1000,   :class => "img-fluid center-block foodtruck-img" %>
     </div>
-
-    <div class="col-md-4 booking-form">
-      <h3>Book <%= @foodtruck.name %></h3>
-      <!-- Reservation Form -->
-      <%= render 'bookings/form' %>
+    <div class="col-md-4 col-sm-12">
+      <div class="foodtruck-card">
+        <h3>Book <%= @foodtruck.name %></h3>
+        <!-- Reservation Form -->
+        <%= render 'bookings/form' %>
+      </div>
     </div>
   </div>
-
-  <div class="info-container">
-    <div class="foodtruck-description">
+  <%# bottom row %>
+  <div class="row info-container">
+    <div class="col-md-7 col-sm-12">
+      <div class="foodtruck-card">
       <h1><%= @foodtruck.name %></h1>
       <br>
       <p><%= @foodtruck.description %></p>
-      <div class="menu-package">
-        <h4>Menu Package</h4>
-      </div>
+      <h4 class="menu-package" >Menu Package</h4>
       <p><%= @foodtruck.menu_package %></p>
       <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
       <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
@@ -30,6 +30,12 @@
       <div class="details-title">
         <h4>Details</h4>
       </div>
+    </div>
+    <div class="col-md-4 col-sm-12">
+          <div class="foodtruck-card">
+
+      <h4 class="details-title">Details </h4>
+      <% if policy(Foodtruck).new? %> <button type="button" class="btn btn-secondary">Edit your foodtruck</button>  <% end %>
       <table class="table">
         <tbody>
           <tr class="border-light">
@@ -50,11 +56,11 @@
           </tr>
         </tbody>
       </table>
-
+      </div>
     </div>
   </div>
-
   <%# Only show the edit button if the user has authorization to make foodtrucks %>
+</div>
   <%# if policy(Foodtruck).create? %>
   <%#<button type="button" class="btn btn-secondary">Edit your foodtruck</button> %>
   <%#<% end %>
