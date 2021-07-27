@@ -1,6 +1,8 @@
-<div class="container mt-4">
-  <h1>My Foodtruck Bookings</h1>
-  <h1> </h1>
+<div class="container">
+  <div class="booking-container">
+
+<h1>My Foodtruck Bookings</h1>
+
   <div class="row">
     <% @bookings.each do |booking| %>
     <div class="card mt-4 mb-4 card-body" style="width: 100%;">
@@ -12,6 +14,7 @@
           <h5 class="card-text">Status: <%= booking.status %></h5>
         </div>
       </div>
+    </div>
       <div class="card-details mt-4">
         <h5 class="card-text">Booking Date: </h2>
           <p><%= booking.start_time.strftime("%b %d, %Y ") %> to <%= booking.end_time.strftime("%b %d, %Y ") %> </p>
@@ -27,3 +30,4 @@
     </div>
     <% end %>
   </div>
+</div>
