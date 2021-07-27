@@ -15,3 +15,8 @@ class FoodtruckPolicy < ApplicationPolicy
       return true
     end
 end
+
+private
+
+def is_owner?
+end
