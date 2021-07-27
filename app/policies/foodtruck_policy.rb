@@ -14,6 +14,15 @@ class FoodtruckPolicy < ApplicationPolicy
     def new?
       return true
     end
+    def edit?
+      return true
+    end
+    def update?
+      return true
+    end
+    def destroy?
+      return true
+    end
 end
 
 private
