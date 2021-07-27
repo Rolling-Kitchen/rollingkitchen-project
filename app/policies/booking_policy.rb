@@ -14,6 +14,6 @@ class BookingPolicy < ApplicationPolicy
     return true
   end
   def create?
-    false unless @user.is_restaurant?
+    @user.is_restaurant? ? false : true
   end
 end
