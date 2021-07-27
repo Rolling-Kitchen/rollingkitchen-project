@@ -30,8 +30,3 @@ class FoodtruckPolicy < ApplicationPolicy
       @user.is_restaurant?
     end
 end
-
-private
-
-def is_owner?
-end
