@@ -21,7 +21,14 @@
       <p><%= @foodtruck.description %></p>
       <h4 class="menu-package" >Menu Package</h4>
       <p><%= @foodtruck.menu_package %></p>
-      
+      <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
+      <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+    </div>
+    <div class="foodtruck-details">
+      <div class="details-title">
+        <h4>Details</h4>
       </div>
     </div>
     <div class="col-md-4 col-sm-12">
@@ -56,11 +63,5 @@
 </div>
   <%# if policy(Foodtruck).create? %>
   <%#<button type="button" class="btn btn-secondary">Edit your foodtruck</button> %>
-  <button class = "btn"><%= link_to "Edit",
-            edit_foodtruck_path(@foodtruck)%></button>
-  <button class="btn"><%= link_to "Delete",
-            foodtruck_path(@foodtruck),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %></button>
   <%#<% end %>
 </div>
