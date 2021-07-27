@@ -5,5 +5,4 @@ class Booking < ApplicationRecord
   enum status: [:available, :awaiting_response, :booked]
   validates :event_name, :event_details, :expected_attendees, :event_location, presence: true
 
-
 end
