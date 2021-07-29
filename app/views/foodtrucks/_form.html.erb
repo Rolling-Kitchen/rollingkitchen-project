@@ -1,10 +1,10 @@
 <%= simple_form_for [@foodtruck] do |f| %>
-  <%= f.input :name, label: 'Foodtruck name' %>
-  <%= f.input :description, as: :text, label: 'Description' %>
+  <%= f.input :name, label: 'Name', placeholder: 'What\'s the name of the foodtruck?' %>
+  <%= f.input :description, as: :text, :input_html => { :rows => 6 }, label: 'Description', placeholder: 'What makes the foodtruck amazing?' %>
   <%= f.input :food_type, label: 'Cuisine' %>
-  <%= f.input :food_price, label: 'Avg. price per person' %>
-  <%= f.input :menu_package, as: :text, label: 'Menu package' %>
-  <%= f.input :location, label: 'Address' %>
+  <%= f.input :food_price, label: 'Avg. price per person', placeholder: 'What's the average price a customer pays?' %>
+  <%= f.input :menu_package, as: :text, :input_html => { :rows => 6 }, label: 'Menu package', placeholder: 'What\'s on the menu?' %>
+  <%= f.input :location, label: 'Address', placeholder: 'Where is the foodtruck located?' %>
   <%= f.input :photo, as: :file, label: 'Upload photo' %>
-  <%= f.button :submit, class: 'btn btn-primary', value: 'Submit' %>
+  <%= f.button :submit, class: 'btn btn-primary foodtruck-button', value: 'Submit' %>
 <% end %>
