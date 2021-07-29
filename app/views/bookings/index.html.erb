@@ -2,7 +2,7 @@
 <h1>Foodtruck Bookings</h1>
 
 <div class="card-details mt-4 mb-4" style="width: 100%;">
-      
+
     <% @bookings.each do |booking| %>
     <%= cl_image_tag booking.foodtruck.photo.key, :class => "img-booking", crop: :fill %>
       <div class="card-summary" style="display: flex;align-items: center;">
@@ -13,7 +13,7 @@
       </div>
     </div>
       <div class="card-details mt-4" style="width: 100%;">
-        
+
 
   <div class="table-wrapper">
   <ul class="horizontal col header">
@@ -24,7 +24,7 @@
       <li class="content right">Attendees</li>
 	</ul>
 	<ul class="data col horizontal">
-    <li class="content">  
+    <li class="content">
 		 <div><%= booking.created_at.strftime("%b %d, %Y ") %></div>
 		 <div class="secondary"><%= booking.created_at.strftime("%A") %></div>
 	 </li>
@@ -49,6 +49,17 @@
 		 <div class="icon-wrapper">
 			 <span class="icon edit" data-tooltip="Edit"></span><span class="icon delete" data-tooltip="Delete"></span></div>
 	 </li>
+   <% if current_user.is_restaurant? == true %>
+      <%= simple_form_for booking do |f| %>
+        <%= f.input :status, as: :hidden, input_html: { value: :accepted} %>
+        <%= f.submit 'Accept', class: 'btn btn-info' %>
+      <% end %>
+
+      <%= simple_form_for booking do |f| %>
+        <%= f.input :status, as: :hidden, input_html: { value: :rejected} %>
+        <%= f.submit 'Reject', class: 'btn btn-info' %>
+      <% end %>
+  <% end %>
 	</ul>
  </div>
 </div>
