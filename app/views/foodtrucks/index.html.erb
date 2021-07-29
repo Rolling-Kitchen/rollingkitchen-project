@@ -5,10 +5,11 @@
 
 <%= javascript_pack_tag 'isotope_filters'%>
 
-<div class="search-bar">
-                        <%= form_tag foodtrucks_path, class: 'search-field', method: :get do %>
-                        <%= text_field_tag :query,
-                            params[:query], class: "form-control", placeholder: "Find a foodtruck by location, cuisine or name"%>
-                        <%= submit_tag "Search", class: "btn btn-primary" %>
-                        <% end %>
-                    </div>
+<div class="search-container">
+  <div class="search-input">
+    <%= form_tag foodtrucks_path, method: :get do %>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a foodtruck by location, cuisine or name"%>
+      <%= submit_tag "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
