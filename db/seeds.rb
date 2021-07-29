@@ -23,6 +23,7 @@ nice_fries = Foodtruck.create!(
     are also among the possibilities. In addition, our range is complemented by various beverages such as soft drinks, 
     coffee, tea and hot chocolate.",
     food_type: "Fastfood",
+    food_price: "¥580",
     menu_package: "The following various products are prepared at our Foodtruck: Bag of fresh fries, 
     Fresh fries pulled pork/chicken salad, Burgundy croquette, Fricadelle, Bitter starter.",
     location: "492-1260 Takada, Aizumisato-machi Onuma-gun, Fukushima, Japan"
@@ -42,6 +43,7 @@ Our Gado Gado can be prepared both vegetarian and with chicken. To finish your m
 
 Booking = enjoying!",
     food_type: "Asian",
+    food_price: "¥850",
     menu_package: "Kripik serves: Soto soup, Chicken satay with peanut sauce, Vegetarian spring rolls, Chicken spring rolls, Gado Gado, Fried banana",
     location: "216-1034, Nishishichijo Minaminishinocho, Shimogyo-ku-shi, Kyoto, Japan",
   })
@@ -54,6 +56,7 @@ build_burrito = Foodtruck.create!(
     description: "Build a Burrito serves Cali-Tex-Mexican street food live from our colorful food trucks.
     Our dishes consist only of fresh ingredients, ingredients that are cut, seasoned and fried on the spot.",
     food_type: "Mexican",
+    food_price: "¥910",
     menu_package: "We serve the following items: Burrito, Burrito-bowl, Nachos, Tacos, Chili-cheese fries",
     location: "8-8, Roppongi 3-chome, Minato-ku, Tokyo, Japan",
   })
@@ -67,6 +70,7 @@ bagels_beans = Foodtruck.create!(
     More than 90% of the population starts their day with a cup of coffee. A good coffee bar therefore has an irresistible appeal. 
     And we have some nice bagels too. Who doesn't love bagels?",
     food_type: "Sandwich",
+    food_price: "¥620",
     menu_package: "Coffee: Americano, Espresso, Cappuccino, Latte Macchiato, Flat White, Bagels: Salmon Creamcheese, Carpaccio, BLT, Tomato & Egg",
     location: "461-1168, Harumi Ofuisutawax(11-kai), Chuo-ku, Tokyo, Japan",
   })
@@ -79,6 +83,7 @@ lx_barbecue = Foodtruck.create!(
     description: "At LX BBQ we prepare all dishes on our smokers and black bastards. The preparation of the most delicious dishes in an authentic way as it should be. 
     Fresh meat, seasoned and rubbed with our own spices and marinades, prepared at your location.",
     food_type: "Barbecue",
+    food_price: "¥1150",
     menu_package: "Burgers, spareribs, hotwings, pulled pork, pulled chicken, pulled beef and smokey pinchos",
     location: "197-1250, Oyoshi, Koshigaya-shi, Saitama, Japan",
   })
