@@ -1,10 +1,11 @@
 <div class="container-md">
   <%# Top Row %>
   <div class="row mt-5">
-    <div class="col-md-7 col-sm-12">
-        <%= cl_image_tag @foodtruck.photo.key, width: 1000,   :class => "img-fluid center-block foodtruck-img" %>
+    <div class="col-lg-7 col-md-12 " id="image-container">
+      <div class="foodtruck-card" id="image-space">
+      </div>
     </div>
-    <div class="col-md-4 col-sm-12">
+    <div class="col-lg-4 col-md-12">
       <div class="foodtruck-card">
         <h3>Book <%= @foodtruck.name %></h3>
         <!-- Reservation Form -->
@@ -14,54 +15,75 @@
   </div>
   <%# bottom row %>
   <div class="row info-container">
-    <div class="col-md-7 col-sm-12">
-      <div class="foodtruck-card">
-      <h1><%= @foodtruck.name %></h1>
-      <br>
-      <p><%= @foodtruck.description %></p>
-      <h4 class="menu-package" >Menu Package</h4>
-      <p><%= @foodtruck.menu_package %></p>
-      <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
-      <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-    </div>
-    <div class="foodtruck-details">
-      <div class="details-title">
-        <h4>Details</h4>
+    <div class="col-lg-7 col-md-12 ">
+      <div class="foodtruck-card h-100">
+        <h1><%= @foodtruck.name %></h1>
+        <br>
+        <p><%= @foodtruck.description %></p>
+        <h4 class="menu-package" >Menu Package</h4>
+        <p><%= @foodtruck.menu_package %></p>
       </div>
-    </div>
-    <div class="col-md-4 col-sm-12">
-          <div class="foodtruck-card">
 
-      <h4 class="details-title">Details </h4>
-      <% if policy(Foodtruck).new? %> <button type="button" class="btn btn-secondary">Edit your foodtruck</button>  <% end %>
-      <table class="table">
-        <tbody>
-          <tr class="border-light">
-            <th scope="row">Rating</th>
-            <td>⭐️ ⭐️ ⭐️ ⭐️</td>
-          </tr>
-          <tr class="border-light">
-            <th scope="row">Food Type</th>
-            <td><%= @foodtruck.food_type %></td>
-          </tr>
-          <tr class="border-light">
-            <th scope="row">Required facilities</th>
-            <td>Electricity, gas</td>
-          </tr>
-          <tr class="border-light">
-            <th scope="row">Location </th>
-            <td><%= @foodtruck.location %></td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
     </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="foodtruck-card">
+          <h4 class="details-title">Details </h4>
+          <div class = "restaurant_related_actions">
+                    <% if policy(Foodtruck).new? %>
+            <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
+            <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+          <% end %>
+          </div>
+          
+          <table class="table">
+            <tbody>
+              <tr class="border-light">
+                <th scope="row">Rating</th>
+                <td>⭐️ ⭐️ ⭐️ ⭐️</td>
+              </tr>
+              <tr class="border-light">
+                <th scope="row">Food Type</th>
+                <td><%= @foodtruck.food_type %></td>
+              </tr>
+              <tr class="border-light">
+                <th scope="row">Food Price</th>
+                <td><%= @foodtruck.food_price %></td>
+              </tr>
+              <tr class="border-light">
+                <th scope="row">Required facilities</th>
+                <td>Electricity, gas</td>
+              </tr>
+              <tr class="border-light">
+                <th scope="row">Location </th>
+                <td><%= @foodtruck.location %></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
   </div>
-  <%# Only show the edit button if the user has authorization to make foodtrucks %>
 </div>
-  <%# if policy(Foodtruck).create? %>
-  <%#<button type="button" class="btn btn-secondary">Edit your foodtruck</button> %>
-  <%#<% end %>
-</div>
+
+
+
+<style>
+#image-space{
+  text-align: center;
+  background: url(<%= cloudinary_url(@foodtruck.photo.key, :transformation => { :dpr => "auto", :responsive => true, :width => "auto", :crop => "scale"} ) %>) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+
+  #image-container{
+    height: 200px;
+  }
+ }
+
+</style>
+
+      <%# <%= cl_image_tag @foodtruck.photo.key, width: 1000,   :class => "img-fluid center-block foodtruck-img" %> %>

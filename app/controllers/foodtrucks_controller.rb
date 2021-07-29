@@ -38,9 +38,9 @@ class FoodtrucksController < ApplicationController
   end
 
   def destroy
+    authorize @foodtruck
     @foodtruck.destroy
     redirect_to root_path
-    authorize @foodtruck
   end
 
   private
@@ -50,6 +50,6 @@ class FoodtrucksController < ApplicationController
   end
 
   def foodtruck_params
-    params.require(:foodtruck).permit(:name, :description, :food_type, :menu_package, :location, :photo)
+    params.require(:foodtruck).permit(:name, :description, :food_type, :food_price, :menu_package, :location, :photo)
   end 
 end
