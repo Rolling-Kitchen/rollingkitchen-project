@@ -24,7 +24,7 @@ def new
 end
 
 def create
-    @booking = Booking.new(booking_params)    
+    @booking = Booking.new(booking_params)
     @booking.foodtruck = Foodtruck.find(params[:foodtruck_id])
     @booking.user = current_user
     authorize @booking
