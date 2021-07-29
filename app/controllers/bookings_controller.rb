@@ -24,11 +24,11 @@ def new
 end
 
 def create
-    @booking = Booking.new(booking_params)    
+    @booking = Booking.new(booking_params)
     @booking.foodtruck = Foodtruck.find(params[:foodtruck_id])
     @booking.user = current_user
     @foodtruck = Foodtruck.find(params[:foodtruck_id])
-    @booking.status = "Waiting for a response"
+    @booking.status = 1
 
     authorize @foodtruck
     p "here is the booking info"
