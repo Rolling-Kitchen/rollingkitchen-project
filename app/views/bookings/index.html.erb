@@ -1,33 +1,57 @@
 <div class="container">
-  <div class="booking-container">
+<h1>Foodtruck Bookings</h1>
 
-<h1>My Foodtruck Bookings</h1>
-
-  <div class="row">
+<div class="card-details mt-4 mb-4" style="width: 100%;">
+  
     <% @bookings.each do |booking| %>
-    <div class="card mt-4 mb-4 card-body" style="width: 100%;">
+    <%= cl_image_tag booking.foodtruck.photo.key, :class => "img-booking", crop: :fill %>
       <div class="card-summary" style="display: flex;align-items: center;">
-        <%= cl_image_tag booking.foodtruck.photo.key, height: 100, width: 100, crop: :fill %>
         <div class="ml-4">
-          <h2 class="card-title"><%= booking.created_at.strftime("Reservation made on %A, %b %d, %Y ") %></h2>
           <h5 class="card-text">Truck name: <%= booking.foodtruck.name %></h5>
           <h5 class="card-text">Status: <%= booking.status %></h5>
         </div>
       </div>
     </div>
-      <div class="card-details mt-4">
-        <h5 class="card-text">Booking Date: </h2>
-          <p><%= booking.start_time.strftime("%b %d, %Y ") %> to <%= booking.end_time.strftime("%b %d, %Y ") %> </p>
-          <h5 class="card-text">Event Name: </h5>
-          <p> <%= booking.event_name %></p>
-          <h5 class="card-text">Event Details:</h5>
-          <p><%= booking.event_details %></p>
-          <h5 class="card-text">Event Location:</h5>
-          <p><%= booking.event_location %></p>
-          <h5 class="card-text">Expected Attendees:</h5>
-          <p><%= booking.expected_attendees %></p>
-      </div>
-    </div>
-    <% end %>
+      <div class="card-details mt-4" style="width: 100%;">
+        
+
+  <div class="table-wrapper">
+  <ul class="horizontal col header">
+      <li class="content">Reservation Made</li>
+      <li class="content">Booking Date</li>
+      <li class="content">Event</li>
+      <li class="content ">Location</li>
+      <li class="content right">Attendees</li>
+	</ul>
+	<ul class="data col horizontal">
+    <li class="content">  
+		 <div><%= booking.created_at.strftime("%b %d, %Y ") %></div>
+		 <div class="secondary"><%= booking.created_at.strftime("%A") %></div>
+	 </li>
+
+	 <li class="content">
+		 <div><%= booking.start_time.strftime("%b %d, %Y ") %> to <%= booking.end_time.strftime("%b %d, %Y ") %></div>
+		 <div class="secondary">4 months</div>
+	 </li>
+	 <li class="content">
+		 <div><%= booking.event_name %></div>
+		 <div class="secondary"><%= booking.event_details %></div>
+	 </li>
+	 <li class="content">
+		 <div><%= booking.event_location %></div>
+		 <div class="secondary"></div>
+	 </li>
+	 <li class="content">
+		 <div><%= booking.expected_attendees %></div>
+		 <div class="secondary"></div>
+	 </li>
+	 <li class="content">
+		 <div class="icon-wrapper">
+			 <span class="icon edit" data-tooltip="Edit"></span><span class="icon delete" data-tooltip="Delete"></span></div>
+	 </li>
+	</ul>
+ </div>
+</div>
+   <% end %>
   </div>
 </div>
