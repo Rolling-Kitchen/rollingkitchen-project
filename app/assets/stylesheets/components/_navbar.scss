@@ -1,51 +1,74 @@
-.navbar {
-  width: 100%;
-  height: 120px;
-  display: flex;
+.navbar-rollingkitchen {
   justify-content: space-between;
-  position: fixed;
-	border: none;
-	border-radius: 0px;
-	padding: 16px 16px;
-	transition: .4s;
-	background:transparent;
-	margin: 0;
-	font-family: $main-text;
-	z-index: 8888;
+  background: $gray-dark;
+  padding: 18px;
 }
 
-.navbar .navbar-collapse {
+.navbar-rollingkitchen .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar .navbar-brand img {
-  width: 100px;
-  height: auto;
+.navbar-rollingkitchen .navbar-brand img {
+  width: 200px;
 }
 
-.navbar-dark .navbar-nav .nav-link { 
+.navbar-light .navbar-nav .nav-link {
   color: $primary-light;
-  border-width: 2px;
-  border-color: $primary-light;
-  background-color: #d53535;
-  border-style:dotted;
-  margin-right: 20px;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover , .navbar-dark .navbar-nav .nav-link:focus {
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: $primary-dark;
 }
 
-.navbar .navbar-toggler {
-  color: white;
-  border-color: white;
-}
+// New Navbar code 07/29/21
+// .navbar {
+//   width: 100%;
+//   height: 120px;
+//   display: flex;
+//   justify-content: space-between;
+//   position: fixed;
+// 	border: none;
+// 	border-radius: 0px;
+// 	padding: 16px 16px;
+// 	transition: .4s;
+// 	background:transparent;
+// 	margin: 0;
+// 	font-family: $main-text;
+// 	z-index: 8888;
+// }
 
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 2px;
-}
+// .navbar .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+// .navbar .navbar-brand img {
+//   width: 100px;
+//   height: auto;
+// }
+
+// .navbar-dark .navbar-nav .nav-link { 
+//   color: $primary-light;
+//   border-width: 2px;
+//   border-color: $primary-light;
+//   background-color: #d53535;
+//   border-style:dotted;
+//   margin-right: 20px;
+// }
+
+// .navbar-dark .navbar-nav .nav-link:hover , .navbar-dark .navbar-nav .nav-link:focus {
+//   color: $primary-dark;
+// }
+
+// .navbar .navbar-toggler {
+//   color: white;
+//   border-color: white;
+// }
+
+// .navbar-toggler {
+//   padding: 0.25rem 0.75rem;
+//   font-size: 1.25rem;
+//   line-height: 1;
+//   background-color: transparent;
+//   border: 1px solid transparent;
+//   border-radius: 2px;
+// }
