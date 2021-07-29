@@ -1,4 +1,10 @@
 class FoodtruckPolicy < ApplicationPolicy
+  attr_reader :user, :foodtruck
+
+  def initialize(user, foodtruck)
+    @user = user
+    @foodtruck = foodtruck
+  end
   class Scope < Scope
     def resolve
       scope.all
@@ -12,20 +18,15 @@ class FoodtruckPolicy < ApplicationPolicy
       return true
     end
     def new?
-      return true
+      @user.is_restaurant?
     end
     def edit?
-      return true
+      @user.is_restaurant?
     end
     def update?
-      return true
+      @user.is_restaurant?
     end
     def destroy?
-      return true
+      @user.is_restaurant?
     end
-end
-
-private
-
-def is_owner?
 end
