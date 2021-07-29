@@ -40,7 +40,24 @@ def create
 end
 
     def index
-        @bookings = policy_scope(Booking).where(user_id: current_user.id)
+        if current_user.is_restaurant?
+            @bookings = policy_scope(Booking).where(foodtruck_id: current_user)
+        else
+            @bookings = policy_scope(Booking).where(user_id: current_user)
+        end
+    end
+
+    def update
+      @booking = Booking.find(params[:id])
+      authorize @booking
+      if @booking.update(booking_params)
+    # redirect_to # up to you...
+        @booking.save
+        redirect_to bookings_path
+      else
+    # render # where was the booking update form?
+        redirect_to bookings_path
+  end
     end
 
     private

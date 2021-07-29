@@ -10,6 +10,8 @@
     "Sandwiches", "Singaporean", "Juice", "Soup", "Spanish", "Taiwanese", "Vegetarian", "Vietnamese"],
   label: 'Cuisine' %>
   <%= f.input :food_price, label: 'Avg. price per person', placeholder: 'Whats the average price a customer pays?' %>
+  <%= f.input :food_type, label: 'Cuisine' %>
+  <%= f.input :food_price, label: 'Avg. price per person', placeholder: 'What\'s the average price a customer pays?' %>
   <%= f.input :menu_package, as: :text, :input_html => { :rows => 6 }, label: 'Menu package', placeholder: 'What\'s on the menu?' %>
   <%= f.input :location, label: 'Address', placeholder: 'Where is the foodtruck located?' %>
   <%= f.input :photo, label: 'Upload photo' %>
