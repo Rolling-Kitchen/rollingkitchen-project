@@ -11,7 +11,7 @@ coffee_image = File.open(Rails.root.join('app/assets/images/coffee.png'))
 indonesian_image = File.open(Rails.root.join('app/assets/images/indonesian.png'))
 barbecue_image = File.open(Rails.root.join('app/assets/images/barbecue.png'))
 
-user_seed = User.new(email: 'email@email.com', password: '123456', first_name: 'Ron', last_name: "Brown")
+user_seed = User.new(email: 'email@email.com', password: '123456', first_name: 'Ron', last_name: "Brown", is_restaurant: true)
 user_seed.save!
 
 nice_fries = Foodtruck.create!(

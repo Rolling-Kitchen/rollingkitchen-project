@@ -1,74 +1,88 @@
 .intro-header { 
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     text-align: center;
-    background: url('https://res.cloudinary.com/elyse/image/upload/v1627360551/banners/banner_isgqe5.png') no-repeat center center fixed;
+    // background: url('https://res.cloudinary.com/elyse/image/upload/v1627360551/banners/banner_isgqe5.png') no-repeat center center fixed;
+    background-image: url(home-banner.gif);
     background-size: cover;
-    height: 700px;
+    height: 100%;
     width: 100%;
 }
 
-.bg-overlay {
-  background:rgba(0,0,0, 0.5);
-  height: 855px;
-  width: 100%;
-}
-
-.intro-message {
+.banner-container {
     position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    background-image: url(logo/logo-text.png);
+    width: 100%;
 }
 
-/*Big header*/
-.intro-message > h1 {
-    margin-top: -50px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    font-size: 60px;
+.banner-text {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+.calltoaction {
     color: white;
-    text-align: left;
-    padding-left: 10%;
+    font-family: $main-text;
+    font-weight: 200;
+    font-size: 24px;
+    padding-bottom: 24px;
 }
 
-// .intro-divider {
-//     width: 400px;
-//     border-top: 1px solid #f8f8f8;
-//     border-bottom: 1px solid rgba(0,0,0,0.2);
+.btn-banner {
+    background-color: $primary-dark;
+    border-color: lightyellow;
+}
+
+.btn-banner:hover , .btn-banner:focus {
+    background-color: $primary-light;
+    border-color: lightyellow;
+  }
+
+
+// /*Big header*/
+// .intro-message > h1 {
+//     margin-top: -50px;
+//     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+//     font-size: 60px;
+//     color: white;
+//     text-align: center;
 // }
 
-/*small header*/
-.intro-message > h3 {
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-  color: white;
-  text-align: left;
-  padding-left: 10%;
-}
+// /*small header*/
+// .intro-message > h3 {
+//   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+//   color: white;
+//   text-align: left;
+//   padding-left: 10%;
+// }
 
-@media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
+// @media(max-width:767px) {
+//     .intro-message {
+//         padding-bottom: 15%;
+//     }
 
-    .intro-message > h1 {
-        font-size: 30px;
-    }
+//     .intro-message > h1 {
+//         font-size: 30px;
+//     }
 
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
+//     ul.intro-social-buttons > li {
+//         display: block;
+//         margin-bottom: 20px;
+//         padding: 0;
+//     }
 
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+//     ul.intro-social-buttons > li:last-child {
+//         margin-bottom: 0;
+//     }
 
-    .intro-divider {
-        width: 100%;
-    }
-}
-/*line*/
-hr.intro-divider {
-  border: 1px outset rgba(255, 255, 255, 0.2);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-  width: 100%;
-}
+//     .intro-divider {
+//         width: 100%;
+//     }
+// }
+// /*line*/
+// hr.intro-divider {
+//   border: 1px outset rgba(255, 255, 255, 0.2);
+//   box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+//   width: 100%;
+// }
