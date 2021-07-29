@@ -49,6 +49,7 @@ end
 
     def update
       @booking = Booking.find(params[:id])
+      authorize @booking
       if @booking.update(booking_params)
     # redirect_to # up to you...
         @booking.save
