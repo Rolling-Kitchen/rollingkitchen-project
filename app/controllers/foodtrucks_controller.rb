@@ -4,6 +4,11 @@ class FoodtrucksController < ApplicationController
   def index
     # Policy scope - defaults to resolve.all and shows all.
     @foodtrucks = policy_scope(Foodtruck)
+    if params[:query].present?
+      @foodtrucks = Foodtruck.search_by_location_and_name(params[:query])
+    else
+      @foodtrucks = Foodtruck.all
+    end
   end
 
   def show
