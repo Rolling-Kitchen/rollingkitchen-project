@@ -28,16 +28,19 @@ class FoodtrucksController < ApplicationController
   end
 
   def edit
+    raise AuthorizationError unless @foodtruck.user == current_user && current_user.is_restaurant?
     authorize @foodtruck
   end
 
   def update
+    raise AuthorizationError unless @foodtruck.user == current_user && current_user.is_restaurant?
     @foodtruck.update(foodtruck_params)
     redirect_to foodtruck_path(@foodtruck)
     authorize @foodtruck
   end
 
   def destroy
+    raise AuthorizationError unless @foodtruck.user == current_user && current_user.is_restaurant?
     authorize @foodtruck
     @foodtruck.destroy
     redirect_to root_path
