@@ -38,9 +38,9 @@ class FoodtrucksController < ApplicationController
   end
 
   def destroy
+    authorize @foodtruck
     @foodtruck.destroy
     redirect_to root_path
-    authorize @foodtruck
   end
 
   private

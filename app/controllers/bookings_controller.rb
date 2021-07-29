@@ -27,12 +27,10 @@ def create
     @booking = Booking.new(booking_params)
     @booking.foodtruck = Foodtruck.find(params[:foodtruck_id])
     @booking.user = current_user
+    authorize @booking
     @foodtruck = Foodtruck.find(params[:foodtruck_id])
     @booking.status = 1
-
-    authorize @foodtruck
     p "here is the booking info"
-    p @booking
     if @booking.save
       redirect_to bookings_path
     else
