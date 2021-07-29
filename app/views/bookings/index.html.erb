@@ -2,7 +2,7 @@
 <h1>Foodtruck Bookings</h1>
 
 <div class="card-details mt-4 mb-4" style="width: 100%;">
-  
+      
     <% @bookings.each do |booking| %>
     <%= cl_image_tag booking.foodtruck.photo.key, :class => "img-booking", crop: :fill %>
       <div class="card-summary" style="display: flex;align-items: center;">
