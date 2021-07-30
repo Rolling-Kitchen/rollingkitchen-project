@@ -50,11 +50,6 @@ class FoodtrucksController < ApplicationController
 
   private
 
-  def search_food
-    mexican = params[:food_type].present? ? params[:food_truck] : '%'
-    @foodtruck = Foodtruck.search(food_type)
-  end
-
   def set_foodtruck
     @foodtruck = Foodtruck.find(params[:id])
   end
