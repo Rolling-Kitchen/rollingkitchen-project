@@ -1,5 +1,5 @@
-<%= button_to "New Foodtruck", new_foodtruck_path(@foodtrucks), :method => :get, class: "btn" %>
 <div class="card-container">
+<h2>Foodtrucks (<%= @foodtrucks.count %>)<h2>
   <div class="holder" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
     <% @foodtrucks.each do |foodtruck| %>
     <%= link_to foodtruck_path(foodtruck) do %>
