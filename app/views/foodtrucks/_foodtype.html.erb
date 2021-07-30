@@ -2,62 +2,82 @@
 	<ol>
 		<li>
 			<span class="food-category-name">Bubble Tea</span>
-			<%= link_to "#", class: "drink" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "bubble+tea" do %>
 			<%= image_tag "menu/boba.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Burgers</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "burgers" do %>
 			<%= image_tag "menu/burger.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Chicken</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "chicken" do %>
 			<%= image_tag "menu/friedchicken.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Desserts</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "desserts" do %>
 			<%= image_tag "menu/parfait.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Fish and Chips</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "fish+and+chips" do %>
 			<%= image_tag "menu/fishnchips.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Hotdog</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "hotdog" do %>
 			<%= image_tag "menu/hotdog.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Italian</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "italian" do %>
 			<%= image_tag "menu/pizza.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Japanese</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "japanese" do %>
 			<%= image_tag "menu/sushi.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Kebab</span>
-			<%= link_to "#", class: "img-menu" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "kebab" do %>
 			<%= image_tag "menu/kebab.png" %>
+			<% end %>
 			<% end %>
 		</li>
 		<li>
 			<span class="food-category-name">Mexican</span>
-			<%= link_to "#", class: "mexican" do %>
+			<%= form_tag foodtrucks_path, method: :get do %>
+			<%= link_to foodtrucks_path :query => "mexican" do %>
 			<%= image_tag "menu/burrito.png" %>
+			<% end %>
 			<% end %>
 		</li>
 	</ol>

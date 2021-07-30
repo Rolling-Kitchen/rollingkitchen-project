@@ -9,10 +9,10 @@
       <% if user_signed_in? %>
         <% if current_user.is_restaurant? == true %>
           <li class="nav-item">
-            <%= link_to "Add a Foodtruck", new_foodtruck_path, class: "nav-link" %>
+            <%= link_to "Add Foodtruck", new_foodtruck_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Booking Dashboard", bookings_path, class: "nav-link" %>
+            <%= link_to "My Bookings", bookings_path, class: "nav-link" %>
           </li>
         <% end %>
         <% if current_user.is_restaurant? == false %>

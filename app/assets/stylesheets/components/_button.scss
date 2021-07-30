@@ -13,16 +13,18 @@
   border: 4px solid transparent;
 }
 
-.btn {
+.btn-orange {
   background-color: #fa870a;
   color: white;
   padding: 8px 24px;
+  border-color:#ffa443;
   border-radius: 4px;
   transition: background 0.3s ease;
   text-decoration: none;
 }
 
-.btn:hover {
+.btn-orange:hover {
   background: #f07c00;
+  border-color:#ffa443;
   color: white;
 }
