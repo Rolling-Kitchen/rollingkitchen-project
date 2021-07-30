@@ -1,16 +1,16 @@
-<div class="card-container">
-<h2>Foodtrucks (<%= @foodtrucks.count %>)<h2>
-  <div class="holder" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
+<%= button_to "New Foodtruck", new_foodtruck_path(@foodtrucks), :method => :get, class: "btn" %>
+<div class="container-fluid" id="card-container" >
+  <div class="grid" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
     <% @foodtrucks.each do |foodtruck| %>
-    <%= link_to foodtruck_path(foodtruck) do %>
-    <div class="card" style="width: 18rem;">
-      <%= cl_image_tag foodtruck.photo.key, :class => "img-card" %>
-      <div class="card-body">
-        <h5 class="card-title"> <%= foodtruck.name %></h5>
-        <p class="card-food-type"><%= foodtruck.food_type %></p>
-      </div>
-    </div>
-    <% end %>
+      <%= link_to foodtruck_path(foodtruck) do %>
+        <div class="card grid-item" style="width: 18rem;">
+          <%= cl_image_tag foodtruck.photo.key, :height=>200, :crop=>"fill", :class => "img-card" %>
+          <div class="card-body">
+            <h5 class="card-title"> <%= foodtruck.name %></h5>
+            <p class="card-food-type"><%= foodtruck.food_type %></p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
