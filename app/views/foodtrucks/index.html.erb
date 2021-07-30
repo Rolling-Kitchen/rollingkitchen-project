@@ -4,3 +4,11 @@
 
 
 <%= javascript_pack_tag 'initIsotope'%>
+<div class="search-container">
+  <div class="search-input">
+    <%= form_tag foodtrucks_path, method: :get do %>
+    <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a foodtruck by location, cuisine or name"%>
+      <%= submit_tag "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,10 +1,20 @@
 <%= simple_form_for [@foodtruck] do |f| %>
   <%= f.input :name, label: 'Name', placeholder: 'What\'s the name of the foodtruck?' %>
   <%= f.input :description, as: :text, :input_html => { :rows => 6 }, label: 'Description', placeholder: 'What makes the foodtruck amazing?' %>
+  <%= f.input :food_type, :collection => 
+    ["American", "Armenian", "Asian", "Australian", "Bakery", "Barbeque", "Belgian",
+    "Breakfast", "Burgers", "Cafes", "Chicken", "Chinese", "Crepes", "Cuban", "Dessert",
+    "Empanadas", "Fast Food", "Filipino", "Fish & Chips", "French", "German", "Hawaiian",
+    "Hot Dogs", "Ice Cream", "Indian", "Indonesian", "Italian", "Jamaican", "Japanese",
+    "Korean", "Mexican", "Pancakes", "Pasta", "Peruvian", "Pizza", "Polish", "Salad",
+    "Sandwiches", "Singaporean", "Juice", "Soup", "Spanish", "Taiwanese", "Vegetarian", "Vietnamese"],
+  label: 'Cuisine' %>
+  <%= f.input :food_price, label: 'Avg. price per person', placeholder: 'Whats the average price a customer pays?' %>
   <%= f.input :food_type, label: 'Cuisine' %>
   <%= f.input :food_price, label: 'Avg. price per person', placeholder: 'What\'s the average price a customer pays?' %>
   <%= f.input :menu_package, as: :text, :input_html => { :rows => 6 }, label: 'Menu package', placeholder: 'What\'s on the menu?' %>
   <%= f.input :location, label: 'Address', placeholder: 'Where is the foodtruck located?' %>
-  <%= f.input :photo, as: :file, label: 'Upload photo' %>
+  <%= f.input :photo, label: 'Upload photo' %>
   <%= f.button :submit, class: 'btn btn-primary foodtruck-button', value: 'Submit' %>
 <% end %>
+

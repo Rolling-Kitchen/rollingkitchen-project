@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'pg_search', '~> 2.3.0'
 
 
 # Use Active Storage variant
@@ -33,6 +34,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'simple_form_extension'
+gem 'simple_form_fancy_uploads'
 gem 'pundit'
 
 gem 'cloudinary', '~> 1.16.0'
@@ -80,3 +83,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+gem 'redactor-rails', github: 'glyph-fr/redactor-rails'
+gem 'redactor-rails', github: 'glyph-fr/redactor-rails'

@@ -1,7 +1,7 @@
 class BookingPolicy < ApplicationPolicy
   attr_reader :user, :booking
 
-  def initialize(user, foodtruck)
+  def initialize(user, booking)
     @user = user
     @booking = booking
   end
@@ -15,5 +15,8 @@ class BookingPolicy < ApplicationPolicy
   end
   def create?
     @user.is_restaurant? ? false : true
+  end
+  def update?
+    @booking.foodtruck_id === @user.id
   end
 end
