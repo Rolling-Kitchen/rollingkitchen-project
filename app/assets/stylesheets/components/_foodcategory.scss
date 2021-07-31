@@ -60,7 +60,7 @@ ol {
 }
 
 #menu-categories {
-  background: white;
+  background: transparent;
   overflow-y: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -94,9 +94,9 @@ ol {
   align-items: center;
 }
 
-#menu-categories li:hover,
+#menu-categories li:hover,  
 #menu-categories li.active {
-  background-image: radial-gradient(ellipse at center, #ffffff 40%, rgba(255, 229, 149, 0.89) 100%);
+  background-image: radial-gradient(ellipse at center, #ffffff 40%, rgba(253, 211, 85, 0.89) 100%);
 }
 
 #menu-categories .food-category-name {

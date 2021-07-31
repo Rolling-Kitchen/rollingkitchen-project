@@ -3,7 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
+import Rails, { linkDisableSelector } from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
@@ -22,6 +22,10 @@ ActiveStorage.start()
 import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
 
+// Carousel
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,5 +36,22 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // initIsotope();
-  initFlatpickr();
+  // initFlatpickr();
+
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 2,
+    slideTransition: "linear",
+    nav: false,
+    margin: 10,
+    responsive:{
+      0:{
+        items:1
+       }
+     },
+    //  nav: true,
+    //  navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+   })
 });
+
