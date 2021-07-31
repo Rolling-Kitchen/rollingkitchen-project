@@ -17,6 +17,6 @@ class BookingPolicy < ApplicationPolicy
     @user.is_restaurant? ? false : true
   end
   def update?
-    @booking.foodtruck_id === @user.id
+    @user.bookings_as_owner
   end
 end
