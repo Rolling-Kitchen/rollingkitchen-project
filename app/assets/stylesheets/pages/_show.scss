@@ -14,7 +14,10 @@
 // Top row styles
 
 .foodtruck-img {
-  border-radius: 3px;}
+  border-radius: 3px;
+  object-fit: cover;
+  text-align: center;
+}
 
   .booking-form {
   // padding: 20px;
