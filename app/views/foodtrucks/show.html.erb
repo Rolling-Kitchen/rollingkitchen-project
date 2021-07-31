@@ -71,7 +71,7 @@
 <style>
 #image-space{
   text-align: center;
-  background: url(<%= cloudinary_url(@foodtruck.photo.key, :transformation => { :dpr => "auto", :responsive => true, :width => "auto", :crop => "scale"} ) %>) no-repeat center center;
+  background: url(<%= cloudinary_url(@foodtruck.photo.key, :transformation => { :dpr => "auto", :responsive => true, :width => "auto", :crop => "scale"})%> ) no-repeat center center;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -86,4 +86,3 @@
 
 </style>
 
-      <%# <%= cl_image_tag @foodtruck.photo.key, width: 1000,   :class => "img-fluid center-block foodtruck-img" %> %>
