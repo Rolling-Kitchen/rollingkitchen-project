@@ -1,3 +1,6 @@
+
+<%= button_to "New Foodtruck", new_foodtruck_path(@foodtrucks), :method => :get, class: "btn" %>
+
 <div class="container-fluid" id="card-container" >
 <h2>All Foodtrucks (<%= @foodtrucks.count%>)</h2>
   <div class="grid" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
