@@ -1,65 +1,64 @@
-  <div class="card-details mt-4 mb-4" style="width: 100%;">
-      <%= cl_image_tag booking_card.foodtruck.photo.key, :class => "img-booking", crop: :fill %>
-      <div class="card-summary" style="display: flex;align-items: center;">
-        <div class="ml-4">
-        </div>
-      </div>
+<%# colapsed card %>
+<div class="container-fluid mt-4 table-wrapper" >
+  <div class="table-header">
+    <div class="header-image mr-2 mt-1 mb-3">
+        <%= cl_image_tag booking_card.foodtruck.photo.key, crop: :fill, width: 100, height: 100 %>  
+    </div>  
+      <h2 class=""><%= booking_card.created_at.strftime("Reservation made on %A, %b %d %Y for ") %> <%= booking_card.foodtruck.name %></h2>
   </div>
-    <div class="card-details mt-4" style="width: 100%;">
-      <div class="table-wrapper">
-        <ul class="horizontal col header">
-          <li class="content">Truck Name</li>
-          <li class="content">Reservation Made</li>
-          <li class="content">Booking Date</li>
-          <li class="content">Event</li>
-          <li class="content ">Location</li>
-          <li class="content right">Attendees</li>
-        </ul>
-        <ul class="data col horizontal">
-          <li class="content">
-            <div><%= booking_card.foodtruck.name %></div>
-          </li>
-          <li class="content">
-            <div><%= booking_card.created_at.strftime("%b %d, %Y ") %></div>
-          </li>
-          <li class="content">
-            <div><%= booking_card.start_time.strftime("%b %d, %Y ") %> to <%= booking_card.end_time.strftime("%b %d, %Y ") %></div>
-            <div class="secondary"></div>
-          </li>
-          <li class="content">
-            <div><%= booking_card.event_name %></div>
-            <div class="secondary"><%= booking_card.event_details %></div>
-          </li>
-          <li class="content">
-            <div><%= booking_card.event_location %></div>
-            <div class="secondary"></div>
-          </li>
-          <li class="content">
-            <div><%= booking_card.expected_attendees %></div>
-            <div class="secondary"></div>
-          </li>
+  <div class="row">
+    <div class="col">
+      <p class="header">Booking Date</p>
+      <div class="fade_in"><%= booking_card.start_time.strftime("%b %d, %Y ") %> - <%= booking_card.end_time.strftime("%b %d, %Y ") %></div>
+    </div>
+    <div class="col">
+      <p class="header">Location</p>
+      <div class="fade_in"><%= booking_card.event_location %></div>
+      <div class="secondary"></div>
+    </div>
+    <div class="col">
+      <p class="header">Reservation status</p>
+      <div class="fade_in"><%= booking_card.status.capitalize %></div>
+    </div>
+  </div>
+  <hr/>
+  <div class="row details">
+  <hr/>
+      <div class="col">
+    <h4>Request Details:</h4>
+    <ul>
+      <li> Event Name: <%= booking_card.event_name %> </li>
+      <li> Event Details: <%= booking_card.event_details %> </li>
+      <li> Expected Attendees: <%= booking_card.expected_attendees %> </li>
+    </ul>
+    </div>
+
+
+    <div class="col">
+      <h4>Event Host:</h4>
+      <ul>
+        <li> Host Name: <%= booking_card.user.first_name %>  <%= booking_card.user.last_name %></li>
+        <li> Host Email: <%= booking_card.user.email %> </li>
+      </ul>
+    <div style="display: flex">
           <% if current_user.is_restaurant? == true %>
             <% if booking_card.pending? %>
               <%= simple_form_for booking_card do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-                <%= f.submit 'Accept', class: 'btn btn-info' %>
+                <%= f.submit 'Accept', class: 'btn btn-info mr-2' %>
               <% end %>
               <%= simple_form_for booking_card do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
                 <%= f.submit 'Reject', class: 'btn btn-info' %>
               <% end %>
             <% else %>
-              <p class='booking-tag'><%= booking_card.status %></p>
+              <p class='booking-tag'></p>
             <% end %>
             <% else %>
-              <p class='booking-tag'><%= booking_card.status %></p>
+              <p class='booking-tag'>✅ Sent!</p>
           <% end %>
-
-        </ul>
-      </div>
+        </div>
     </div>
 
-
-
-
-
+  </div>
+</div>
