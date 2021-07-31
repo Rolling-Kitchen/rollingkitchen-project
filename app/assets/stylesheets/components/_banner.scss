@@ -40,6 +40,16 @@
     border-color: lightyellow;
   }
 
+.btn-banner {
+    background-color: $primary-dark;
+    border-color: $gray-dark;
+    border-style: dotted;
+    color: white;
+    font-family: $body-font;
+    font-size: 16px;
+    font-weight: 800;
+}
+
 
 // /*Big header*/
 // .intro-message > h1 {
