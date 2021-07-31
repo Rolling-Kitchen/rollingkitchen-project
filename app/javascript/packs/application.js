@@ -23,7 +23,7 @@ import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
 
 // Carousel
-import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.carousel.scss';
 import 'owl.carousel';
 
 
