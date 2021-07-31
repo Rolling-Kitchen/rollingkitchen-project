@@ -30,8 +30,8 @@
           <h4 class="details-title">Details </h4>
           <div class = "restaurant_related_actions">
                     <% if policy(Foodtruck).new? %>
-            <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
-            <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
+            <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn btn-primary btn-orange" %>
+            <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn btn-primary btn-orange",
               method: :delete,
               data: { confirm: "Are you sure?" } %>
           <% end %>
