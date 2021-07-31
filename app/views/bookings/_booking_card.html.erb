@@ -21,38 +21,34 @@
       <div class="fade_in"><%= booking_card.status.capitalize %></div>
     </div>
   </div>
-  <div>
-    <button class="btn-expand">Details</button>
+  <div style="
+    display: flex;
+    justify-content: flex-end;" class="mr-5">
+    <button class="btn-expand mt-3 btn btn-primary btn-orange btn-block">Show Booking Details</button>
   </div>
-  <hr/>
-  <div class="row hidden expand">
-  <hr/>
+  <div class="row hidden expand mt-5">
       <div class="col">
-    <h4>Request Details:</h4>
-    <ul>
-      <li> Event Name: <%= booking_card.event_name %> </li>
-      <li> Event Details: <%= booking_card.event_details %> </li>
-      <li> Expected Attendees: <%= booking_card.expected_attendees %> </li>
-    </ul>
+    <h4 class="booking-detail-header">Request Details:</h4>
+      <p> <b>Event Name:</b> <%= booking_card.event_name %> </p>
+      <p><b> Event Details:</b> <%= booking_card.event_details %> </p>
+      <p><b> Expected Attendees:</b> <%= booking_card.expected_attendees %> </p>
     </div>
 
 
     <div class="col">
-      <h4>Event Host:</h4>
-      <ul>
-        <li> Host Name: <%= booking_card.user.first_name %>  <%= booking_card.user.last_name %></li>
-        <li> Host Email: <%= booking_card.user.email %> </li>
-      </ul>
+      <h4 class="booking-detail-header">Event Host:</h4>
+        <p><b> Host Name: </b><%= booking_card.user.first_name %>  <%= booking_card.user.last_name %></p>
+        <p><b> Host Email: </b><%= booking_card.user.email %> </p>
     <div style="display: flex">
           <% if current_user.is_restaurant? == true %>
             <% if booking_card.status == 'pending' %>
-              <%= simple_form_for booking_card do |f| %>
+              <%= simple_form_for booking_card, html: { class: "mr-2"} do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-                <%= f.submit 'Accept', class: 'btn btn-info mr-2' %>
+                <%= f.submit 'Accept Booking', class: 'btn btn-info btn-orange' %>
               <% end %>
               <%= simple_form_for booking_card do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-                <%= f.submit 'Reject', class: 'btn btn-info' %>
+                <%= f.submit 'Reject Booking', class: 'btn btn-info mr-2 btn-orange' %>
               <% end %>
             <% else %>
               <p class='booking-tag'></p>
