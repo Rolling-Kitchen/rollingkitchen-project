@@ -4,7 +4,7 @@
         <div class="ml-4">
         </div>
       </div>
-    </div>
+  </div>
     <div class="card-details mt-4" style="width: 100%;">
       <div class="table-wrapper">
         <ul class="horizontal col header">
@@ -44,14 +44,17 @@
                 <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
                 <%= f.submit 'Accept', class: 'btn btn-info' %>
               <% end %>
-            <%= simple_form_for booking_card do |f| %>
-              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-              <%= f.submit 'Reject', class: 'btn btn-info' %>
+              <%= simple_form_for booking_card do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                <%= f.submit 'Reject', class: 'btn btn-info' %>
+              <% end %>
+            <% else %>
+              <p class='booking-tag'><%= booking_card.status %></p>
+            <% end %>
+            <% else %>
+              <p class='booking-tag'><%= booking_card.status %></p>
           <% end %>
-          <% else %>
-            <p class='booking-tag'><%= booking_card.status %></p>
-          <% end %>
-          <% end %>
+
         </ul>
       </div>
     </div>
