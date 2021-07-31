@@ -21,7 +21,6 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
-initFlatpickr();
 
 // Carousel
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -37,7 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // initIsotope();
-  // initFlatpickr();
+  initFlatpickr();
 
   $('.owl-carousel').owlCarousel({
     loop: true,
