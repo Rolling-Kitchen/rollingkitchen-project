@@ -30,8 +30,8 @@
           <h4 class="details-title">Details </h4>
           <div class = "restaurant_related_actions">
                     <% if policy(Foodtruck).new? %>
-            <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn" %>
-            <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn",
+            <%= button_to "Edit", edit_foodtruck_path(@foodtruck), :method => :get, class: "btn btn-primary btn-orange" %>
+            <%= button_to "Delete", foodtruck_path(@foodtruck), :method => :get, class: "btn btn-primary btn-orange",
               method: :delete,
               data: { confirm: "Are you sure?" } %>
           <% end %>
@@ -39,23 +39,23 @@
           
           <table class="table">
             <tbody>
-              <tr class="border-light">
+              <tr class='table borderless'>
                 <th scope="row">Rating</th>
                 <td>⭐️ ⭐️ ⭐️ ⭐️</td>
               </tr>
-              <tr class="border-light">
+              <tr class='table borderless'>
                 <th scope="row">Food Type</th>
                 <td><%= @foodtruck.food_type %></td>
               </tr>
-              <tr class="border-light">
+              <tr class='table borderless'>
                 <th scope="row">Food Price</th>
                 <td><%= @foodtruck.food_price %></td>
               </tr>
-              <tr class="border-light">
+              <tr class='table borderless'>
                 <th scope="row">Required facilities</th>
                 <td>Electricity, gas</td>
               </tr>
-              <tr class="border-light">
+              <tr class='table borderless'>
                 <th scope="row">Location </th>
                 <td><%= @foodtruck.location %></td>
               </tr>

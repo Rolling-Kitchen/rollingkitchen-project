@@ -7,7 +7,7 @@ class BookingPolicy < ApplicationPolicy
   end
   class Scope < Scope
     def resolve
-      scope.all
+      user.bookings
     end
   end
   def index?
@@ -17,6 +17,6 @@ class BookingPolicy < ApplicationPolicy
     @user.is_restaurant? ? false : true
   end
   def update?
-    @booking.foodtruck_id === @user.id
+    @user.bookings_as_owner
   end
 end
