@@ -45,7 +45,7 @@
       </ul>
     <div style="display: flex">
           <% if current_user.is_restaurant? == true %>
-            <% if booking_card.pending? %>
+            <% if booking_card.status == 'pending' %>
               <%= simple_form_for booking_card do |f| %>
                 <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
                 <%= f.submit 'Accept', class: 'btn btn-info mr-2' %>
