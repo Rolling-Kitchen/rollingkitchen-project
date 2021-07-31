@@ -41,9 +41,9 @@ end
 
     def index
         if current_user.is_restaurant?
-            @bookings = policy_scope(Booking).where(foodtruck_id: current_user)
+            @bookings = policy_scope([:owner, Booking])
         else
-            @bookings = policy_scope(Booking).where(user_id: current_user)
+            @bookings = policy_scope(Booking)
         end
     end
 

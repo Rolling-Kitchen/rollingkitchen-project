@@ -4,5 +4,6 @@ class Booking < ApplicationRecord
 
   enum status: [:available, :pending, :booked, :accepted, :rejected]
   validates :event_name, :event_details, :expected_attendees, :event_location, presence: true
+  scope :long_title, -> { where("LENGTH(title) > 20") }
 
 end

@@ -1,69 +1,98 @@
-/*
-  SECTIONS
-*/
 
-/*
-  CLASSES
-*/
-.custom-font {
-    font-family:$body-font;
-    color:gray;
-    font-size:75px;
-    line-height:0;
-  }
+.full-about {
+  min-height: 200px;
+  background-color: #faf6ed;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-repeat: repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 180px 0;
+  margin-bottom: 100px;
+  position: relative;
+  /*overflow: hidden;*/
+}
+
+.full-about .about-content h3 {
+  color: $secondary-dark;
+  font-family: $body-font;
+  font-size: 55px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.full-about .about-content .about-details {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.full-about .about-content .about-details p {
+  font-size: 15px;
+  font-weight: 200;
+  font-family: $body-font;
+  width: 450px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: $gray-dark;
+}
+.full-about .about-content .about-details p:first-child {
+  font-weight: 200;
+}
+
+.about-icon-text {
+  display: flex;
+  margin-top: 20px;
   
-  .add-padding {
-    padding:25px;
-  }
-  
-  .center-text {
-    text-align:center;
-    margin-bottom:40px;
-    margin-top:30px;
-    color:rgb(77, 77, 77);
-    h2 {
-      margin-top:25px;
-      line-height:0;
-    }
-    p {
-      margin-top:0;
-      font-family: $body-font;
-      line-height:1.5;
-    }
-    a {
-      font-family: $body-font;
-      color:lightgrey;
-      text-transform:uppercase;
-      font-size:12px;
-      font-weight:600;
-      letter-spacing:1px;
-      border-bottom:solid 2px gray; 
-    }
-  }
-  
-  .add-flex {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    .stuffed-cherries {
-      background:url('https://s-media-cache-ak0.pinimg.com/736x/61/b1/98/61b19844448b2bad5c78e9a2c6347986.jpg')no-repeat center center;
-      background-size:cover;
-      height:315px;
-      width:320px;
-    }
-  }
-  
-  .center-h1 {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-  .custom-h1 {
-    text-align:center;
-    color: white;
-    letter-spacing:5px;
-    margin-bottom:0;
-    span {
-      letter-spacing:0;
-    }
-  }
+}
+.abt-icon {
+  width: 15%;
+}
+
+.abt-text {
+  width: 85%;
+}
+
+.about-icon-text .abt-icon {
+  height: 80px;
+  width: 15%;
+  background-color: $secondary-dark;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 98px;
+}
+
+.about-icon-text .abt-icon i {
+  text-align: center;
+  font-size: 50px;
+  line-height: 1.6;
+  color: $secondary-dark;
+  cursor: pointer;
+}
+
+.about-icon-text .abt-text h2 {
+  font-family: $body-font;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.1;
+  margin-left: 30px;
+  margin-right: 100px;
+  text-transform: capitalize;
+  color: $gray-dark;
+}
+.about-icon-text .abt-text h2 span {
+  color: $secondary-dark;
+}
+
+// .about-title h2 {
+//   font-size: 200px;
+//   font-weight: 700;
+//   color: #ffffff;
+//   position: absolute;
+//   top: 235px;
+//   left: -100px;
+//   z-index: 9;
+//   transform: rotate(-90deg);
+// }
+
+
+
