@@ -21,6 +21,7 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
+initFlatpickr();
 
 // Carousel
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -54,4 +55,5 @@ document.addEventListener('turbolinks:load', () => {
     //  navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
    })
 });
+
 
