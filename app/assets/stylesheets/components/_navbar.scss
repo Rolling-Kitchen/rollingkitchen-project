@@ -1,7 +1,11 @@
 .navbar-rollingkitchen {
   justify-content: space-between;
-  background: $gray-dark;
-  padding: 18px;
+  background: #ed3a3a;
+  padding: 18px; 
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar-rollingkitchen .navbar-collapse {
