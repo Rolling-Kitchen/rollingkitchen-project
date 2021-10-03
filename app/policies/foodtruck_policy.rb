@@ -18,7 +18,9 @@ class FoodtruckPolicy < ApplicationPolicy
       return true
     end
     def new?
-      @user.is_restaurant?
+      if @user
+        @user.is_restaurant?
+      end
     end
     def edit?
       @user.is_restaurant?
