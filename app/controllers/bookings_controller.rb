@@ -1,20 +1,6 @@
 class BookingsController < ApplicationController
   before_action :authenticate_user!
 
-
-#   def create
-#     @booking = Booking.new(booking_params)
-#     # @booking.user = current_user
-#     authorize @booking
-#     if @booking.save
-#         flash[:success] = "Object successfully created"
-#         redirect_to root_path
-#     else
-#         flash[:error] = "Something went wrong"
-#     end
-# end
-
-
 def show
     @booking = Booking.find(params[:id])
 end
