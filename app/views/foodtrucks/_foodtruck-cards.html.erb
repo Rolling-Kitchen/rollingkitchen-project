@@ -1,5 +1,5 @@
 <div class="container-fluid" id="card-container" >
-<h2>All Foodtrucks (<%= @foodtrucks.count%>)</h2>
+<h2 class="foodtruck-count">All Foodtrucks (<%= @foodtrucks.count%>)</h2>
   <div class="grid" data-isotope='{ "itemSelector": ".card", "layoutMode": "fitRows" }'>
     <% @foodtrucks.each do |foodtruck| %>
       <%= link_to foodtruck_path(foodtruck) do %>
